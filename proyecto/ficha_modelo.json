@@ -1,0 +1,43 @@
+{
+  "grupo": "Grupo 4",
+  "problema": "credito",
+  "modelo": "Regresión Logística Bayesiana (PyMC, NUTS)",
+  "metricas": {
+    "auc": 0.7415,
+    "exactitud_balanceada": 0.5443,
+    "brier": 0.0882,
+    "umbral_optimo": 0.14,
+    "ganancia_neta_test": 65873.0
+  },
+  "hiperparametros": {
+    "priors": "a ~ Normal(0, 2) · b ~ Normal(0, 1)",
+    "chains": 4,
+    "draws": 1000,
+    "tune": 1000,
+    "random_seed": 42,
+    "features": [
+      "edad",
+      "ingreso_mensual",
+      "antiguedad_meses",
+      "transacciones_mes",
+      "monto_credito",
+      "plazo_meses",
+      "ratio_cuota",
+      "mora_previa",
+      "ratio_monto_ingreso",
+      "es_informal",
+      "joven",
+      "antiguedad_corta"
+    ],
+    "particion": "70/30 estratificada, random_state=42"
+  },
+  "semilla": 42,
+  "semilla_datos": 96244,
+  "fecha": "2026-11-19 01:27",
+  "versiones": {
+    "python": "3.13.18",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1"
+  }
+}
